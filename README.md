@@ -19,23 +19,35 @@ See: http://www.secretmaryo.org/
 
 Please describe the game using the Gherkin Syntax
 
-Example: 
+## Examples 
 
+
+Featrue : Collect Stars
+
+
+Scenario: Count collected Stars
 ```
-Given a 1 player Game 
-When level "1-1" is finished
-Then Toad should say "The princess is in another castle"
+Given a one player game
+When Maryo collects a star
+Then the count of stars should be increased 1
 ```
 
-## Specs
+Scenario: Bonus Live for 100 stars
+```
+Given a one player game
+And Maryo has 99 Stars
+When Maryo collects a star
+Then the count of lives should be increased by 1 
+```
 
-* Player 1
-* Player 2 
-* Mario 
-* Luigi
-* Princess (Damsel in distress)
-* Bowser (The evil guy) 
-* Toad (A toad)
-* All rules of Super Mario apply 
-* If Mario cleared any level but the last level, he gets told "the princess is in another castle"
-* http://ian-albert.com/games/super_mario_bros_maps/
+
+
+
+
+
+
+
+
+
+
+
